@@ -1,7 +1,7 @@
 import { AiOutlineEye, AiOutlineEyeInvisible} from "react-icons/ai";
 import { useState } from "react";
 
-export default function PasswordInput({setFormData, setPass}) {
+export default function PasswordInput({setFormData, passType}) {
 
     let [isClicked, setIsClicked] = useState(false);
 
@@ -13,14 +13,14 @@ export default function PasswordInput({setFormData, setPass}) {
       setFormData((pre)=>{
         return {
           ...pre,
-          ["pass"]: e.target.value
+          [passType]: e.target.value
         }
       })
     }
 
   return <div className="relative" id="confPass">
             <input
-              onInput={setPass ? changeHandler: null}
+              onInput={changeHandler}
               required
               className="px-2 py-2 rounded-lg text-lg bg-[#161d29] mt-1 border-b border-gray-600 w-full pr-10"
               type={isClicked?'text': "password"}

@@ -67,7 +67,7 @@ export default function ({isLogged, setIsLogged}) {
       <button className={`md:hidden ${showMenu && 'rotate-90'}`} onClick={menuHandler}>
         <RxHamburgerMenu color="white" size={25} />
       </button>
-      <div className={`absolute z-[99] border border-gray-700 rounded-lg text-center right-0 top-[50px] w-[fit] p-3 ${showMenu? 'block' : 'hidden'}`}>
+      <div className={`absolute z-[99] border border-gray-700 rounded-lg text-center right-0 top-[50px] w-[fit] p-3 bg-[#000814] ${showMenu? 'block' : 'hidden'}`}>
         <div className="flex flex-col">
         <NavLink to="/" className="px-2 text-lg text-white">
           Home
